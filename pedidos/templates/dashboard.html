@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Dashboard</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+<div class="card p-3">
+<h4>Productos</h4>
+<a href="/productos" class="btn btn-primary">Ver</a>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3">
+<h4>Nuevo Pedido</h4>
+<a href="/pedido" class="btn btn-primary">Crear</a>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card p-3">
+<h4>Pedidos</h4>
+<a href="/pedidos" class="btn btn-primary">Ver</a>
+</div>
+</div>
+
+</div>
+
+{% endblock %}

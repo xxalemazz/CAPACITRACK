@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+<div class="row justify-content-center">
+
+<div class="col-md-5">
+
+<div class="card p-4 shadow">
+
+<h3 class="text-center mb-4">
+Registro
+</h3>
+
+<form method="post">
+
+{% csrf_token %}
+
+<div class="mb-3">
+<label>Usuario</label>
+{{ form.username }}
+</div>
+
+<div class="mb-3">
+<label>Contraseña</label>
+{{ form.password }}
+</div>
+
+<button class="btn btn-primary w-100">
+Registrarse
+</button>
+
+<a href="/login/" class="btn btn-secondary w-100 mt-2">
+Volver a Login
+</a>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+{% endblock %}

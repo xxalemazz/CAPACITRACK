@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Productos</h2>
+
+{% for p in productos %}
+
+<div class="card p-3">
+
+<h4>{{p.nombre}}</h4>
+
+Stock:
+
+{% if p.stock <= 2 %}
+
+<span class="stock-bajo">{{p.stock}}</span>
+
+{% else %}
+
+<span class="stock-ok">{{p.stock}}</span>
+
+{% endif %}
+
+<br>
+
+Limite {{p.limite}}
+
+</div>
+
+{% endfor %}
+
+{% endblock %}

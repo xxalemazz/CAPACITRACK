@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Pedidos</h2>
+
+{% for p in pedidos %}
+
+<div class="card p-3">
+
+<h4>Pedido {{p.id}}</h4>
+
+Fecha {{p.fecha}}
+
+<hr>
+
+{% for d in p.detallepedido_set.all %}
+
+<div>
+
+{{d.producto.nombre}}
+
+Cantidad {{d.cantidad}}
+
+</div>
+
+{% endfor %}
+
+</div>
+
+{% endfor %}
+
+{% endblock %}
